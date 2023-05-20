@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "189449037583",
+    "firebase_url": "https://flutterfire-crud-b5ef5-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "flutterfire-crud-b5ef5",
+    "storage_bucket": "flutterfire-crud-b5ef5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189449037583:android:5996b91e5f827cefe8807a",
+        "android_client_info": {
+          "package_name": "com.example.flutterfire_crud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189449037583-g2jd4nlboq1o35mpjclt9ksesgq4hf8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeabCnV8xxwFuEO86fpLwzGeFWK1UKMbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189449037583-g2jd4nlboq1o35mpjclt9ksesgq4hf8p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "189449037583-o824t60s4hs8i19v93qo0em1ctn4ibme.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterfireCrud"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
