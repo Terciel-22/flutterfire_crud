@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_crud/services/user.service.dart';
 import 'package:flutterfire_crud/widgets/bottom.navigation.bar.dart';
@@ -37,8 +38,31 @@ class HomeScreen extends StatelessWidget {
           ),
         );
       } else {
-        context.go('/');
-        return const SizedBox.shrink();
+        return Scaffold(
+          appBar: AppBar(
+            title: const Center(
+              child: Text("Home"),
+            ),
+          ),
+          body: Center(
+            child: RichText(
+              text: TextSpan(
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                children: [
+                  const TextSpan(text: "Please login first "),
+                  TextSpan(
+                      text: "here.",
+                      style: TextStyle(color: Colors.red.shade600),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          context.go('/');
+                        }),
+                ],
+              ),
+            ),
+          ),
+        );
       }
     });
   }

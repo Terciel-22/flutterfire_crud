@@ -2,17 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutterfire_crud/auth/login/login.screen.dart';
 import 'package:flutterfire_crud/auth/signup/signup.screen.dart';
 import 'package:flutterfire_crud/screens/home/home.screen.dart';
+import 'package:flutterfire_crud/screens/messages/message.service.dart';
 import 'package:flutterfire_crud/screens/messages/messages.screen.dart';
 import 'package:flutterfire_crud/screens/profile/profile.screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 // Flutterfire default initialization
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MainApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (_) => MessageService()),
+  ], child: const MainApp()));
 }
 
 final GoRouter _router = GoRouter(routes: [
