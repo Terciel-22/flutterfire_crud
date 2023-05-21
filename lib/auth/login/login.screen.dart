@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterfire_crud/auth/auth.viewmodel.dart';
+import 'package:flutterfire_crud/services/auth.service.dart';
 import 'package:flutterfire_crud/widgets/email.textfield.dart';
 import 'package:flutterfire_crud/widgets/password.textfield.dart';
 import 'package:go_router/go_router.dart';
@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: 200,
                 child: ElevatedButton(
                   onPressed: () => {
-                    AuthViewModel(
+                    AuthService(
                       email: email.text,
                       password: password.text,
                       goToHome: () => {context.go('/home')},

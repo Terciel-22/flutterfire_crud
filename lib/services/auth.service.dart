@@ -1,14 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart'; //For user authentication
 import 'dart:developer';
 
-class AuthViewModel {
+class AuthService {
   final String? email;
   final String? password;
   final Function? goToHome;
   final Function? setEmailError;
   final Function? setPasswordError;
 
-  AuthViewModel(
+  AuthService(
       {this.email,
       this.password,
       this.goToHome,

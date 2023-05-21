@@ -48,7 +48,7 @@ class MessageList extends StatelessWidget {
         } else if (snapshot.hasError) {
           return const SizedBox.shrink();
         } else {
-          return const CircularProgressIndicator();
+          return const Center(child: CircularProgressIndicator());
         }
       },
     );
